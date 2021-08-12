@@ -1,12 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    a {
+      height: 30px;
+      line-height: 28px;
+      position: relative;
+      display: inline-block;
+      padding: 1.2em 2em;
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      color: white;
+    }
+
+    a::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: linear-gradient(135deg, #6e8efb, #a777e3);
+      border-radius: 4px;
+      transition: box-shadow 0.5s ease, transform 0.2s ease;
+      will-change: transform;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+      transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0)) translateZ(var(--tz, -12px));
+    }
+
+    a:hover::before {
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+    }
+
+    a::after {
+      position: relative;
+      display: inline-block;
+      content: attr(data-title);
+      transition: transform 0.2s ease;
+      font-weight: bold;
+      letter-spacing: 0.01em;
+      will-change: transform;
+      transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0));
+    }
+
+
+    body {
+      background: #edf0f3;
+
+    }
+
+    .box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      transform-style: preserve-3d;
+      transform: perspective(800px);
+    }
+
+    video {
+      position: fixed;
+      left: 0px;
+      bottom: 0;
+      min-width: 60%;
+      height: 100%;
+      /*加滤镜*/
+      /*filter: blur(15px); //背景模糊设置 */
+      /*-webkit-filter: grayscale(100%);*/
+      /*filter:grayscale(100%); //背景灰度设置*/
+      z-index: -11
+    }
+
+    source {
+      height: auto;
+      width: 100%;
+    }
+
+    .link {
+      float: left;
+      position: fixed;
+      top: 80%;
+      left: 50%;
+    }
+
+    .firstitle {
+      color: #fff;
+      letter-spacing: 0;
+      /* background: rgb(252, 252, 252) url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAHklEQVQImWNkYGBgYGD4//8/A5wF5SBYyAr+//8PAPOCFO0Q2zq7AAAAAElFTkSuQmCC) repeat; */
+
+      text-shadow: 3px -3px rgb(48, 190, 233), 2px -2px white, 4px 1px white, -1px 0px 5px white;
+
+      font-weight: bold;
+
+      -webkit-text-fill-color: transparent;
+
+      transform: translate(80px, -200px);
+    }
+  </style>
+
 </head>
+
 <body>
-  <div><a href="./dist/index.html">123123</a></div>
+  <div class="box">
+    <h1 class="firstitle">清 心 的 博 客 空 间 ~</h1>
+    <div class="link">
+      <a href="./dist/index.html" data-title="进入个人主页"></a>
+    </div>
+    <video autoplay loop muted>
+      <source src="./dist/videos/jinx.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <script>
+    const docStyle = document.documentElement.style
+    const aElem = document.querySelector('a')
+    const boundingClientRect = aElem.getBoundingClientRect()
+
+    aElem.onmousemove = function (e) {
+
+      const x = e.clientX - boundingClientRect.left
+      const y = e.clientY - boundingClientRect.top
+
+      const xc = boundingClientRect.width / 2
+      const yc = boundingClientRect.height / 2
+
+      const dx = x - xc
+      const dy = y - yc
+
+      docStyle.setProperty('--rx', `${dy / -1}deg`)
+      docStyle.setProperty('--ry', `${dx / 10}deg`)
+
+    }
+
+    aElem.onmouseleave = function (e) {
+
+      docStyle.setProperty('--ty', '0')
+      docStyle.setProperty('--rx', '0')
+      docStyle.setProperty('--ry', '0')
+
+    }
+
+    aElem.onmousedown = function (e) {
+
+      docStyle.setProperty('--tz', '-25px')
+
+    }
+
+    document.body.onmouseup = function (e) {
+
+      docStyle.setProperty('--tz', '-12px')
+
+    }
+  </script>
 </body>
+
 </html>
