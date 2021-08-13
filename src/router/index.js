@@ -8,10 +8,14 @@ const Home = () => import('@/pages/home/home')
 const routes = [
   {
     path: '/',
-    redirect: '/index'
+    redirect: '/dist/index'
   },
   {
-    path: '/index',
+    path: '/dist',
+    redirect: '/dist/index'
+  },
+  {
+    path: '/dist/index',
     name: 'Home',
     component: Home
   }
