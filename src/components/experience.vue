@@ -8,44 +8,44 @@
         <li>
           <div class="content_left tx_right">
             <span class="s1"></span>
-            <h4>2014 - 2015</h4>
+            <h4>2021.05 - 2021.06</h4>
           </div>
           <div class="content_right tx_left">
-            <h4>公司名1</h4>
-            <p>相关项目详细介绍...</p>
+            <h4>青岛拓宇网络科技有限公司</h4>
+            <p>负责BBScloud项目帮助文档板块的开发</p>
           </div>
           <div class="clearfix"></div>
         </li>
         <li>
           <div class="content_left tx_right">
             <span class="s2"></span>
-            <h4>2015 - 2016</h4>
+            <h4>2020.11 - 2021.05</h4>
           </div>
           <div class="content_right tx_left">
-            <h4>公司名2</h4>
-            <p>相关项目详细介绍...</p>
+            <h4>淄博云睿信息科技有限公司</h4>
+            <p>负责思埠微商网站的开发...</p>
           </div>
           <div class="clearfix"></div>
         </li>
         <li>
           <div class="content_left tx_right">
             <span class="s1"></span>
-            <h4>2016 - 2017</h4>
+            <h4>2019.09 - 2020.10</h4>
           </div>
           <div class="content_right tx_left">
-            <h4>公司名3</h4>
-            <p>相关项目详细介绍...</p>
+            <h4>北京千峰互联科技有限公司</h4>
+            <p>经过了三个阶段的前端培训...</p>
           </div>
           <div class="clearfix"></div>
         </li>
         <li>
           <div class="content_left tx_right">
             <span class="s2"></span>
-            <h4>2017 - 2018</h4>
+            <h4>2018.10 - 2020.10</h4>
           </div>
           <div class="content_right tx_left">
-            <h4>公司名4</h4>
-            <p>相关项目详细介绍...</p>
+            <h4>淄博职业学院网络空间中心</h4>
+            <p>协助社团老师对多个校园网站进行测试，<br/>对部分校园网站简单的更新和维护。</p>
           </div>
           <div class="clearfix"></div>
         </li>

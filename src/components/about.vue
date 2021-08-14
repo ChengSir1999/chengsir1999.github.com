@@ -8,17 +8,16 @@
         <swiper :options="swiperOption" ref="mySwiper">
           <!-- slides -->
           <swiper-slide>
-            <img :style="{height:'50px'}" src="" alt="">
-            <p :style="{background:'url(@/common/images/banner.jpg) center'}">您 在 找 前 端 工 程 师 ？？</p>
+            <div contenteditable="true" class="text effect">您 在 找 前 端 工 程 师 ？？</div>
           </swiper-slide>
           <swiper-slide>
-            <p>您 真 的 来 对 了 ！！</p>
+            <div contenteditable="true" class="text effect">您 真 的 来 对 了 ！！</div>
           </swiper-slide>
           <swiper-slide>
-            <p>我 就 是 一 名 热 爱 前 端 开 发 的 coder。</p>
+            <div contenteditable="true" class="text effect">我 就 是 一 名 热 爱 前 端 开 发 的 coder。</div>
           </swiper-slide>
           <swiper-slide>
-            <p>期 待 您 的 关 注 ~</p>
+            <div contenteditable="true" class="text effect">期 待 您 的 关 注 ~</div>
           </swiper-slide>
           <div class="swiper-pagination" slot="pagination"></div>
           <div class="swiper-button-prev" slot="button-prev"></div>
@@ -64,6 +63,33 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.effect {
+    background: url("/static/img/jinx.png") 100% #333;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: cover;
+    animation: 10s infinite linear animate;
+    font-size: 44px;
+    font-weight: 900;
+}
+.effect:before {
+    content:"";
+    width:100%;
+    height:100%;
+    position: absolute;
+    left:0;
+    top:0;
+    background-color: #3ea7d8;
+    z-index: -1;
+}
+@keyframes animate {
+    0% {
+        background-position:0;
+    }
+    100% {
+        background-position:-1000px 0;
+    }
+}
 
 .about {
   height: auto;

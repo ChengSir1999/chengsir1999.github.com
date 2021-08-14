@@ -1,14 +1,14 @@
 <template>
-  <div class="project">
+  <div class="project" :style="{background:'#25c1f1'}">
     <div class="container">
       <span class="tip">WHAT I DO</span>
       <h1 class="title">{{ title }}</h1>
       <span class="border"></span>
       <ul>
-        <li><img src="../common/images/web1.jpg" alt="项目1" /></li>
-        <li><img src="../common/images/web1.jpg" alt="项目2" /></li>
-        <li><img src="../common/images/web1.jpg" alt="项目3" /></li>
-        <li><img src="../common/images/web1.jpg" alt="项目4" /></li>
+        <li><a href="https://bbscloud.com/"><img src="../common/images/web1.png" alt="项目1" /></a></li>
+        <li><a href="https://www.sibuzyn.com/"><img src="../common/images/web2.png" alt="项目2" /></a></li>
+        <!-- <li><img src="../common/images/web3.png" alt="项目3" /></li>
+        <li><img src="../common/images/web4.png" alt="项目4" /></li> -->
         <div class="clearfix"></div>
       </ul>
     </div>
@@ -89,6 +89,8 @@ export default {
 ul {
   width: 100%;
   padding: 4% 0;
+  display: flex;
+  justify-content: center;
 }
 ul li {
   float: left;

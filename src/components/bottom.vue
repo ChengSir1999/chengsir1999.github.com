@@ -9,10 +9,7 @@
         <dl>
           <dt>Contact By Email</dt>
           <dd>
-            Mail1: <a href="mailto:info@example.com">info@example1.com</a>
-          </dd>
-          <dd>
-            Mail2: <a href="mailto:info@example.com">info@example2.com</a>
+            Mail: <a href="mailto:chengsir1999@163.com">chengsir1999@163.com</a>
           </dd>
         </dl>
       </div>
@@ -27,7 +24,7 @@ export default {
   data () {
     return {
       title: '联系我',
-      desc: '© 2018 Preface . All rights reserved | Design by cisco lai.'
+      desc: '© 2021 Preface . All rights reserved | Design by Cheng.'
     }
   }
 }

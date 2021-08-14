@@ -83,7 +83,22 @@
       /*filter: blur(15px); //背景模糊设置 */
       /*-webkit-filter: grayscale(100%);*/
       /*filter:grayscale(100%); //背景灰度设置*/
-      z-index: -11
+      z-index: -11;
+    }
+
+    .back {
+      position: fixed;
+      left: 0px;
+      bottom: 0;
+      min-width: 60%;
+      height: 100%;
+      z-index: -101;
+    }
+
+    .backImg {
+      height: auto;
+      width: 100%;
+      z-index: -101;
     }
 
     source {
@@ -96,6 +111,7 @@
       position: fixed;
       top: 80%;
       left: 50%;
+      z-index: 100;
     }
 
     .firstitle {
@@ -110,6 +126,8 @@
       -webkit-text-fill-color: transparent;
 
       transform: translate(80px, -200px);
+
+      z-index: 100;
     }
   </style>
 
@@ -117,14 +135,19 @@
 
 <body>
   <div class="box">
-    <h1 class="firstitle">清 心 的 博 客 空 间 ~</h1>
+    <h1 class="firstitle">清 心 的 个 人 主 页 ~</h1>
     <div class="link">
-      <a href="./dist" data-title="进入个人主页"></a>
+      <a href="./dist" data-title="查看个人简历"></a>
     </div>
-    <video autoplay loop muted>
-      <source src="./dist/videos/jinx.mp4" type="video/mp4" />
+    <!-- <video autoplay loop muted>
+      <source src="./dist/static/videos/jinx.mp4" type="video/mp4" />
       Your browser does not support the video tag.
-    </video>
+    </video> -->
+  </div>
+  <div>
+    <div class="back">
+      <img class="backImg" src="./dist/static/img/jinx.png" alt="">
+    </div>
   </div>
 
   <script>
